@@ -11,6 +11,7 @@ namespace ci253
         static void Main(string[] args) 
         {
             Console.WriteLine("I get back down, and i get down again");
+            Console.WriteLine("I get back down, and i get down again");
         }
     }
 }
