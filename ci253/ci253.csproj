@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Command.cs" />
     <Compile Include="CommandWords.cs" />
+    <Compile Include="HandlingInput.cs" />
     <Compile Include="Parser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
