@@ -30,6 +30,7 @@ namespace ci253
             }
             else
             {
+                //First word checking
                 switch (c.CommandWord)
                 {
                     case "QUIT":
