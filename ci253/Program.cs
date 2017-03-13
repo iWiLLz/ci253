@@ -21,9 +21,12 @@ namespace ci253
         static void Main(string[] args) 
         {
             Game g = new Game();
-            System.Threading.TimerCallback timerCallback = g.TickTock;
+            TimerCallback timerCallback = g.TickTock;
             Timer tmr = new Timer(timerCallback, null, 1000, g.refreshRate);
             Console.ReadLine();
+
+            HandlingInput HI = new HandlingInput();
+            HI.play();
         }
     }
 }

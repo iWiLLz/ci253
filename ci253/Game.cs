@@ -12,7 +12,7 @@ namespace ci253
 
         public void TickTock(Object data)
         {
-            Console.WriteLine("Next click of the clock...");
+            //Console.WriteLine("Next click of the clock...");
         }
     }
 }
