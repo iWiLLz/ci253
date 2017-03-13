@@ -38,10 +38,12 @@ namespace ci253
                         return true;
                     case "HELP":
                         Console.WriteLine("Helping");
+                        CommandWords.help();
                         break;
                 }
                 return false;
             }
+
         }
     }
 }
