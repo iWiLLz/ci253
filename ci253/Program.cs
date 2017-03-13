@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 //How to commit changes in Visual Studios after downloading the project from Git:
 
@@ -19,7 +20,10 @@ namespace ci253
     {
         static void Main(string[] args) 
         {
-            
+            Game g = new Game();
+            System.Threading.TimerCallback timerCallback = g.TickTock;
+            Timer tmr = new Timer(timerCallback, null, 1000, g.refreshRate);
+            Console.ReadLine();
         }
     }
 }
