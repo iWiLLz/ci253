@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 
 namespace ci253
 {
-    namespace Paser
-    {
         class HandlingInput
         {
             private Parser parser = new Parser();
@@ -31,4 +29,4 @@ namespace ci253
             }
         }
     }
-}
+
