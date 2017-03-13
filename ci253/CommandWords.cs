@@ -17,5 +17,15 @@ namespace ci253
                 return true;
             return false;
         }
+
+        public void help(object data)
+        {
+            Console.WriteLine("Welcome to FireFighter Simulator 2k65 version 2 electric boogaloo!");
+            Console.WriteLine("The aim of the game is to use your firefighters to put out the fires around Motel Moors!");
+            Console.WriteLine("Controls:");
+            Console.WriteLine("Quit: quits the game");
+            Console.WriteLine("...");
+        }
+
     }
 }
