@@ -24,7 +24,10 @@ namespace ci253
             private Boolean processCommand(Command c)
             {
                 if (c.IsUnkown)
-                    return true;
+            {
+                Console.WriteLine("I don't understand the command, Chief!");
+                return false;
+            }        
                 return false;
             }
         }

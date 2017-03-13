@@ -8,7 +8,7 @@ namespace ci253
 {
     class CommandWords
     {                                           //need to add valid commands as we come across them
-        private static string[] validCommands = { "quit", "help", "..." };
+        private static string[] validCommands = { "QUIT", "HELP", "" };
         public string[] ValidCommands { get { return validCommands; } }
 
         public static Boolean isCommand(string command)

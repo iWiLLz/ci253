@@ -11,7 +11,7 @@ namespace ci253
         public Command getCommand()
         {
             string inputLine = "";
-            inputLine = Console.ReadLine();
+            inputLine = Console.ReadLine().ToUpper();
             String[] values = inputLine.Split(' ', '\n');
             if (CommandWords.isCommand(values[0]))
                 if (values.Count() == 1)
