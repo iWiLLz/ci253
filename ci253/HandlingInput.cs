@@ -6,31 +6,43 @@ using System.Threading.Tasks;
 
 namespace ci253
 {
-        public class HandlingInput
+    public class HandlingInput
+    {
+        private Parser parser = new Parser();
+
+        public void play()
         {
-            private Parser parser = new Parser();
-
-            public void play()
+            Boolean finished = false;
+            while (!finished)
             {
-                Boolean finished = false;
-                while (!finished)
-                {
-                    Console.Write("Command: ");
-                    Command command = parser.getCommand();
-                    finished = processCommand(command);
-                }
+                Console.Write("Command: ");
+                Command command = parser.getCommand();
+                finished = processCommand(command);
             }
+        }
 
-            private Boolean processCommand(Command c)
-            {
-                if (c.IsUnkown)
+        private Boolean processCommand(Command c)
+        {
+            if (c.IsUnkown)
             {
                 Console.WriteLine("I don't understand the command, Chief!");
                 return false;
-            }        
+            }
+            else
+            {
+                switch (c.CommandWord)
+                {
+                    case "QUIT":
+                        Console.WriteLine("Quitting");
+                        return true;
+                    case "HELP":
+                        Console.WriteLine("Helping");
+                        break;
+                }
                 return false;
             }
 
         }
     }
+}
 
