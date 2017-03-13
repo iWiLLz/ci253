@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ci253
 {
-        class HandlingInput
+        public class HandlingInput
         {
             private Parser parser = new Parser();
 
