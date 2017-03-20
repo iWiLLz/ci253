@@ -30,20 +30,63 @@ namespace ci253
             }
             else
             {
-                //First word checking
+                //first word
                 switch (c.CommandWord)
                 {
+                    //quitting
                     case "QUIT":
                         Console.WriteLine("Quitting");
                         return true;
+                    //helping
                     case "HELP":
                         Console.WriteLine("Helping");
                         CommandWords.help();
+                        break;
+                    //report
+                    case "REPORT":
+                        Console.WriteLine("report");
+                        break;
+                    //refuel
+                    case "REFUEL":
+                        Console.WriteLine("refuel");
+                        break;
+                    //Go to room
+                    case "GOTO":
+                        //second word for "goto"
+                        switch (c.SecondWord){
+                            case "ROOM":
+                                //goto room number
+                                if (isInt(c.SecondWord))
+                                {
+                                    int roomNum;
+                                    int.TryParse(c.SecondWord, out roomNum);
+                                    CommandWords.gotoRoom(roomNum);
+                                } else {
+                                    return false;
+                                }
+                                break;
+                            default: return false;
+                        }
                         break;
                 }
                 return false;
             }
 
+        }
+
+        public Boolean isInt(String tWord)
+        {
+            int roomNum;
+            try
+            {
+                int.TryParse(tWord, out roomNum);
+                CommandWords.gotoRoom(roomNum);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

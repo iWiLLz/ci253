@@ -14,5 +14,22 @@ namespace ci253
         {
             //Console.WriteLine("Next click of the clock...");
         }
+
+        //List<Room> Rooms;
+        Room[] Rooms = new Rooms[5];
+
+        int roomXY;
+        public void setUpRooms()
+        {
+            //Create rooms
+            for(int y = 0; y < roomXY; y++)
+            {
+                for(int x = 0; x < roomXY; x++)
+                {
+                    Rooms.Add(new Room());
+                }
+            }
+            
+        }
     }
 }

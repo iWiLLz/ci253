@@ -27,5 +27,9 @@ namespace ci253
             Console.WriteLine("...");
         }
 
+        public static void gotoRoom(int roomNum)
+        {
+            Console.WriteLine("Going to room: " + roomNum);
+        }
     }
 }
