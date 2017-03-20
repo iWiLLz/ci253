@@ -15,21 +15,27 @@ namespace ci253
             //Console.WriteLine("Next click of the clock...");
         }
 
-        //List<Room> Rooms;
-        Room[] Rooms = new Rooms[5];
+        List<Room> Rooms;
+        int roomAmount = 15;
 
-        int roomXY;
-        public void setUpRooms()
+        public void createRooms()
         {
-            //Create rooms
-            for(int y = 0; y < roomXY; y++)
+            Random srand = new Random();
+            int r = srand.Next(0, roomAmount);
+            for (int x = 0; x < roomAmount; x++)
             {
-                for(int x = 0; x < roomXY; x++)
+                Rooms.Add(new Room(x.ToString()));
+                if (x == r)
                 {
-                    Rooms.Add(new Room());
+                    Rooms[x].heatingUp = true;
                 }
             }
-            
         }
+
+        public void checkFires()
+        {
+
+        }
+            
     }
 }
